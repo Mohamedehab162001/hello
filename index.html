@@ -1,10 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Greeting</title>
-</head>
+    <title>Hi Omar</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #00ff88;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .typewriter {
+            font-size: 2.5rem;
+            border-right: 3px solid #00ff88;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(10, end) forwards, blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 9ch } /* 9 characters: "Hi Omar 👋" */
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: transparent }
+            50% { border-color: #00ff88 }
+        }
+    </style>
+</head>
 <body>
-    <h1>Hi Omar</h1>
+    <div class="typewriter">Hi Omar 👋</div>
 </body>
 </html>
