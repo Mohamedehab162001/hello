@@ -5,38 +5,37 @@
     <title>Hi Omar</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-color: #0f0f0f;
+            color: #00ff88;
+            font-family: 'Courier New', Courier, monospace;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            margin: 0;
         }
 
-        h1 {
-            color: white;
-            font-size: 4rem;
-            animation: fadeInUp 2s ease-out;
-            background: linear-gradient(90deg, #f6d365, #fda085);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .typewriter {
+            font-size: 2.5rem;
+            border-right: 3px solid #00ff88;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(10, end) forwards, blink 0.8s infinite;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 9ch } /* 9 characters: "Hi Omar 👋" */
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: transparent }
+            50% { border-color: #00ff88 }
         }
     </style>
 </head>
 <body>
-    <h1>Hi Omar 👋</h1>
+    <div class="typewriter">Hi Omar 👋</div>
 </body>
 </html>
